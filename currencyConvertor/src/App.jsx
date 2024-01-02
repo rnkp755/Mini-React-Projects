@@ -15,7 +15,6 @@ function App() {
 
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to])
-    console.log("Convert is called");
   }
 
   useEffect(() => {

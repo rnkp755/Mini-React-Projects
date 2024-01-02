@@ -32,3 +32,14 @@ npm run dev
 
 ## About this Repository
 These Projects are beginner level __React + vite__ projects made by me just to revise fundamentals of React. These are mini projects and doesn't contain any advance react concepts.
+
+# 1. Currency Convertor
+This Project is a Mini React Project which gives you option to convert the value of different currencies of the world in one another. It gives current exchange rates and capable to do the rate conversion in all most every recognized currency of the world.
+
+The project uses some hooks of react like __useState__ and __useEffect__ and also a custom hook.
+
+![Screenshot of the Web Page](https://github.com/dvmazur/mixtral-offloading/assets/116200170/9b6f71bf-5309-4b9f-82d0-cb54970fd8e9)
+
+![Screenshot of the Web Page](https://github.com/dvmazur/mixtral-offloading/assets/116200170/a1c2faf8-2209-45df-ae5e-57ec4b7bae0d)
+
+# 2. My Portfolio

@@ -43,3 +43,7 @@ The project uses some hooks of react like __useState__ and __useEffect__ and als
 ![Screenshot of the Web Page](https://github.com/dvmazur/mixtral-offloading/assets/116200170/a1c2faf8-2209-45df-ae5e-57ec4b7bae0d)
 
 # 2. My Portfolio
+This is a Mini react Project which is a simple portfolio which you can customize according to you. The portfolio uses __React Router__ and __Context API__ to enhance it's features. It can toggle theme from light to dark and vice versa seamlessely.
+
+![Screenshot of the Web Page](https://github.com/hiteshchoudhary/chai-aur-react/assets/116200170/7f1a28fc-8cb3-4884-bbda-7f3493ba517f)
+![Screenshot of the Web Page](https://github.com/hiteshchoudhary/chai-aur-react/assets/116200170/bd9850f4-e968-48ed-8689-7f6fd56015c0)

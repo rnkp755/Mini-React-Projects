@@ -1,48 +1,61 @@
 import React from 'react'
-function SocialCard() {
+import { Link } from 'react-router-dom'
+function SocialCard(props) {
+      const {
+            type = "Social Media",
+            profilePic = "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            userName = "hackerraushan",
+            profileURL = "https://linkedin.com/in/hackerraushan",
+            followers = 0,
+            connections = 0,
+            repos = 0,
+            posts = 0,
+
+      } = props
       return (
-            <div class="flex font-sans m-2">
+            <div class="flex font-sans m-2 dark:bg-[#010409] rounded-2xl">
                   <div class="flex-none w-48 relative">
-                        <img src="https://images.pexels.com/photos/2533311/pexels-photo-2533311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                        <img src={profilePic} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                   </div>
                   <div class="flex-auto p-6">
+                        <h1 class="flex-auto text-xl font-bold text-black dark:text-white text-center">
+                              {type}
+                        </h1>
                         <div class="flex flex-wrap">
-                              <h1 class="flex-auto text-lg font-semibold text-slate-900">
-                                    eCommerce App
+
+                              <h1 class="flex-auto text-lg font-semibold text-slate-900 dark:text-slate-200 cursor-pointer hover:text-slate-400">
+                                    <Link to={profileURL}>
+                                          {userName}
+                                    </Link>
                               </h1>
                               <a
-                                    class="text-lg font-semibold text-slate-500 hover:cursor-pointer hover:text-slate-800"
-                                    href="#"
+                                    class="text-lg font-semibold text-slate-500 dark:text-slate-300 hover:cursor-pointer hover:text-slate-800 dark:hover:text-white"
+                                    href={profileURL}
                               >
-                                    Visit Github
+                                    Visit {type}
                               </a>
-                              <div class="w-full flex-none text-sm font-medium text-slate-700 mt-0.5">
-                                    <div class="flex items-baseline">
-                                          <div class="space-x-2 flex text-sm">
-                                                <label>
-                                                      <div class="h-5 pl-3 pr-3 rounded-lg flex items-center justify-center  font-semibold bg-slate-900 text-white text-xs">
-                                                            React.js
-                                                      </div>
-                                                </label>
-                                                <label>
-                                                      <div class="h-5 pl-3 pr-3 rounded-lg flex items-center justify-center font-semibold bg-slate-900 text-white text-xs">
-                                                            MongoDB
-                                                      </div>
-                                                </label>
-                                                <label>
-                                                      <div class="h-5 pl-3 pr-3 rounded-lg flex items-center justify-center font-semibold bg-slate-900 text-white text-xs">
-                                                            Node.js
-                                                      </div>
-                                                </label>
-                                          </div>
-                                    </div>
-                              </div>
+
                         </div>
 
-                        <p class="text-sm text-slate-700">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate blanditiis est ea. Nostrum, veritatis. Minima ipsa dolorem ea, deserunt cum nulla illum reprehenderit, accusantium pariatur error quasi optio ad, facere alias ipsam eaque repellat perspiciatis. Est optio porro rem nulla officiis quod error, dolorum molestias odit. Esse nostrum pariatur omnis?
-                        </p>
-
+                        {type === "Github" ? (
+                              <>
+                                    <p class="text-lg font-semibold text-slate-900 dark:text-slate-200">
+                                          Followers: <span>{followers}</span>
+                                    </p>
+                                    <p class="text-lg font-semibold text-slate-900 dark:text-slate-200">
+                                          Repositories: <span>{repos}</span>
+                                    </p>
+                              </>
+                        ) : (
+                              <>
+                                    <p class="text-lg font-semibold text-slate-900 dark:text-slate-200">
+                                          Connections: <span>{connections}</span>
+                                    </p>
+                                    <p class="text-lg font-semibold text-slate-900 dark:text-slate-200">
+                                          Posts: <span>{posts}</span>
+                                    </p>
+                              </>
+                        )}
                   </div>
             </div>
       )

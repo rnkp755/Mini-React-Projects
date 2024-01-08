@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import { Layout, Projects, Home, Contact, SocialMedia } from './components'
+import { Layout, Projects, Home, Contact, SocialMedia, githubInfoLoader } from './components'
+import ThemeContextProvider from './context/ThemeProvider'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route
         path='social-media'
         element={<SocialMedia />}
+        loader={githubInfoLoader}
       />
     </Route>
   )
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
   </React.StrictMode>,
 )
